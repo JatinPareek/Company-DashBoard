@@ -5,7 +5,12 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import SourceFile from "./pages/SourceFile";
+import Home from "./pages/Home";
+import Analytics from "./pages/Analytics";
+import Wishlist from "./pages/Wishlist";
+import Chat from "./pages/Chat";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
 
 function App() {
   const action = useNavigationType();
@@ -24,8 +29,32 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "";
-        metaDescription = "";
+        title = "Home";
+        metaDescription = "This is the home page";
+        break;
+      case "/analytics":
+        title = "Analytics";
+        metaDescription = "This is the analytics page";
+        break;
+      case "/wishlist":
+        title = "Wishlist";
+        metaDescription = "This is the wishlist page";
+        break;
+      case "/chat":
+        title = "Chat";
+        metaDescription = "This is the chat page";
+        break;
+      case "/profile":
+        title = "Profile";
+        metaDescription = "This is the profile page";
+        break;
+      case "/settings":
+        title = "Settings";
+        metaDescription = "This is the settings page";
+        break;
+      default:
+        title = "Dashboard";
+        metaDescription = "This is the dashboard page";
         break;
     }
 
@@ -45,8 +74,14 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<SourceFile />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/analytics" element={<Analytics />} />
+      <Route path="/wishlist" element={<Wishlist />} />
+      <Route path="/chat" element={<Chat />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/settings" element={<Settings />} />
     </Routes>
   );
 }
+
 export default App;

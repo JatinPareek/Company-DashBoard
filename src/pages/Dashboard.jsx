@@ -3,7 +3,7 @@ import FrameComponent from "../components/FrameComponent";
 import MessageContent from "../components/MessageContent";
 import Profile from "../components/Profile";
 
-const SourceFile = () => {
+const Dashboard = () => {
   return (
     <div className="w-full relative bg-white overflow-hidden flex flex-row items-start justify-start leading-[normal] tracking-[normal] [row-gap:20px] mq1125:flex-wrap mq1125:pl-5 mq1125:pr-5 mq1125:box-border">
       <GroupComponent1 />
@@ -21,4 +21,4 @@ const SourceFile = () => {
   );
 };
 
-export default SourceFile;
+export default Dashboard;
